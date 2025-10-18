@@ -234,6 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Функція для демонстрації замовлення
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('checkout-button')) {
-        alert('Дякуємо за замовлення!Наші оператори звяжуться з вами.');
+        alert('Дякуємо за замовлення! Наші оператори зв`яжуться з вами.');
     }
 });
