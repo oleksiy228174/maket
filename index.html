@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Українский магазин технологій</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайту -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Логотип -->
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtu5sgVNqxGMHACKukK9az0RyS22GvSME-2na3UwT-HuudzgV-RmpsqugsRe8-vBYpfzE&usqp=CAU" alt="Логотип" style="width: 73px; height: 73px;">
+                
+                <!-- Навігація -->
+                <nav class="navigation">
+                    <a href="#home" class="nav-link">Про нас</a>
+                    <a href="#catalog" class="nav-link">Каталог</a>
+                    <a href="#contacts" class="nav-link">Контакти</a>
+                </nav>
+
+                <!-- Кошик -->
+                <button id="cart-button" class="cart-button">
+                    <svg class="cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m.6 6H7m0 0v1a1 1 0 001 1h10a1 1 0 001-1v-1M9 19a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                    </svg>
+                    <span>Кошик</span>
+                    <span id="cart-count" class="cart-count hidden">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основний контент -->
+    <main class="main">
+        <div class="container">
+            <!-- Головний банер -->
+            <section id="home" class="hero">
+                <h1 class="hero-title">Ласкаво просимо до TechStore</h1>
+                <p class="hero-description">
+                    Найкращі технології за найкращими цінами. Знайдіть ідеальні гаджети для вашого життя.
+                </p>
+            </section>
+
+            <!-- Секція товарів -->
+            <section id="catalog" class="products-section">
+                <h2 class="section-title">Каталог</h2>
+                <div id="products-grid" class="products-grid">
+                    <!-- Товари будуть додані через JavaScript -->
+                </div>
+            </section>
+
+            <!-- Секція переваг -->
+            <section class="benefits">
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <div class="benefit-icon benefit-icon-blue">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                            </svg>
+                        </div>
+                        <h3>Швидка доставка</h3>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon benefit-icon-green">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3>Гарантія якості</h3>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon benefit-icon-purple">
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
+                            </svg>
+                        </div>
+                        <h3>Підтримка 24/7</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секція контактів -->
+            <section id="contacts" class="contacts-section">
+                <h2 class="section-title">Контакти</h2>
+                
+                <div class="contacts-grid">
+                    <!-- Контактна інформація -->
+                    <div class="contacts-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Телефон</h3>
+                                <p>+380 (99) 333-14-87</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>oleksiykhaynatskiy@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Адреса</h3>
+                                <p>м.Чернівці, вул.Таракани, 1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Години роботи -->
+                    <div class="contacts-hours">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Години роботи</h3>
+                                <p>Пн-Пт: 9:00 - 19:00</p>
+                                <p>Сб-Нд: 10:00 - 17:00</p>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h3>Соціальні мережі</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon">
+                                    <svg fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <svg fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon">
+                                    <svg fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+                <!-- Контакти -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Контакти</h4>
+                    <div class="footer-contacts">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Копірайт -->
+            <div class="footer-bottom">
+               
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно кошика -->
+    <div id="cart-modal" class="cart-modal hidden">
+        <div class="cart-overlay">
+            <div class="cart-content">
+                <!-- Заголовок кошика -->
+                <div class="cart-header">
+                    <h2>Кошик</h2>
+                    <button id="close-cart" class="close-button">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Вміст кошика -->
+                <div class="cart-body">
+                    <div id="cart-items" class="cart-items">
+                        <!-- Товари будуть додані через JavaScript -->
+                    </div>
+
+                    <!-- Порожній кошик -->
+                    <div id="empty-cart" class="empty-cart">
+                        <svg class="empty-cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m.6 6H7m0 0v1a1 1 0 001 1h10a1 1 0 001-1v-1M9 19a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                        </svg>
+                        <p>Кошик порожній</p>
+                        <p class="empty-cart-subtitle">Додайте товари для покупки</p>
+                    </div>
+
+                    <!-- Підсумок та оформлення -->
+                    <div id="cart-summary" class="cart-summary hidden">
+                        <div class="cart-total">
+                            <span>Всього:</span>
+                            <span id="cart-total-price">0 ₴</span>
+                        </div>
+                        <button class="checkout-button">Оформити замовлення</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
